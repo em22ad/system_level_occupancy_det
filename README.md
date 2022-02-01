@@ -1,7 +1,7 @@
 # system_level_occupancy_det
 A Bayes Filter Based System Level Occupancy Detection Module. 
 
-A Visual studio 2017 solution is present in the repo. The file system_od_bayes.cpp has the main() function. 
+A Visual studio C++ 2017 solution is present in the repo. The file system_od_bayes.cpp has the main() function. 
 
 Please follow the directions below to understand the code flow and module usage.
 
