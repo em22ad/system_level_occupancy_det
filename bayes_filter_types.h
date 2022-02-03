@@ -14,14 +14,29 @@
 // Include Files
 #include "rtwtypes.h"
 
+#include <ostream>
+
+using namespace std;
+
 // Type Definitions
-struct emxArray_char_T_1x11 {
-  char data[11];
-  int size[2];
+struct emxArray_char_T_1x11
+{
+    char data[11];
+    int size[2];
 };
 
-struct cell_wrap_0 {
-  emxArray_char_T_1x11 f1;
+struct cell_wrap_0
+{
+    emxArray_char_T_1x11 f1;
+
+    //friend emxArray_char_T_1x11;
+    friend ostream & operator<< (ostream &os, cell_wrap_0 &val)
+    {
+        os << "data is " << val.f1.data << endl;
+        os << "Size are " << val.f1.size[0] << " " << val.f1.size[1] << endl;
+
+        return os;
+    }
 };
 
 #endif

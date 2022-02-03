@@ -21,8 +21,8 @@
 //
 void bayes_filter_initialize()
 {
-  filedata_init();
-  isInitialized_bayes_filter = true;
+    filedata_init();
+    isInitialized_bayes_filter = true;
 }
 
 //

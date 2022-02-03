@@ -18,7 +18,8 @@
 #include <stdio.h>
 
 // Function Declarations
-namespace coder {
+namespace coder
+{
 int cfclose(double fid);
 
 signed char cfopen(const char *cpermission);

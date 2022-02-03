@@ -20,8 +20,8 @@
 //
 void bayes_filter_terminate()
 {
-  // (no terminate code required)
-  isInitialized_bayes_filter = false;
+    // (no terminate code required)
+    isInitialized_bayes_filter = false;
 }
 
 //

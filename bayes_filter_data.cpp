@@ -13,7 +13,7 @@
 #include "bayes_filter_data.h"
 
 // Variable Definitions
-const char cv[11]{'X', '_', '1', ',', 'X', '_', '2', ',', 'X', '_', '3'};
+const char cv[11] {'X', '_', '1', ',', 'X', '_', '2', ',', 'X', '_', '3'};
 
 boolean_T isInitialized_bayes_filter{false};
 

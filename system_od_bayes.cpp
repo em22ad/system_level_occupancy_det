@@ -28,12 +28,13 @@ static void main_bayes_filter();
 //
 static void argInit_1x3_real_T(double result[3])
 {
-	// Loop over the array to initialize each element.
-	for (int idx1{ 0 }; idx1 < 3; idx1++) {
-		// Set the value of the array element.
-		// Change this value to the value that the application requires.
-		result[idx1] = argInit_real_T();
-	}
+    // Loop over the array to initialize each element.
+    for (int idx1{ 0 }; idx1 < 3; idx1++)
+    {
+        // Set the value of the array element.
+        // Change this value to the value that the application requires.
+        result[idx1] = argInit_real_T();
+    }
 }
 
 //
@@ -42,7 +43,7 @@ static void argInit_1x3_real_T(double result[3])
 //
 static double argInit_real_T()
 {
-	return 0.0;
+    return 0.0;
 }
 
 //
@@ -51,84 +52,84 @@ static double argInit_real_T()
 //
 static void main_bayes_filter()
 {
-	cell_wrap_0 e_label;
-	double dv[3];
-	double timestamp;
-	// Initialize function 'bayes_filter' input arguments.
-	// Initialize function input argument 'obs'.
-	// Call the entry-point 'bayes_filter'.
-	//argInit_1x3_real_T(dv);
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 0; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 0;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n";
+    cell_wrap_0 e_label;
+    double dv[3];
+    double timestamp;
+    // Initialize function 'bayes_filter' input arguments.
+    // Initialize function input argument 'obs'.
+    // Call the entry-point 'bayes_filter'.
+    //argInit_1x3_real_T(dv);
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 0; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 0;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n";
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 0; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 30;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 0; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 30;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 60;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 60;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 90;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 90;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 120;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 120;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 150;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 150;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 180;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data <<"\n" ;
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 180;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data <<"\n" ;
 
-	dv[0] = 0; //sensor X1 output = 0
-	dv[1] = 1; //sensor X2 output = 0
-	dv[2] = 0; //sensor X3 output = 0 
-	timestamp = 210;
-	bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
-	cout << e_label.f1.data << "\n";
-	//bayes_filter(argInit_real_T(), dv, *(cell_wrap_0(*)[1]) & e_label);
+    dv[0] = 0; //sensor X1 output = 0
+    dv[1] = 1; //sensor X2 output = 0
+    dv[2] = 0; //sensor X3 output = 0
+    timestamp = 210;
+    bayes_filter(timestamp, dv, *(cell_wrap_0(*)[1]) & e_label);
+    cout << e_label.f1.data << "\n";
+    //bayes_filter(argInit_real_T(), dv, *(cell_wrap_0(*)[1]) & e_label);
 }
 
 int main(int, char **)
 {
-	main_bayes_filter();
-	// Terminate the application.
-	// You do not need to do this more than one time.
-	bayes_filter_terminate();
-	return 0;
+    main_bayes_filter();
+    // Terminate the application.
+    // You do not need to do this more than one time.
+    bayes_filter_terminate();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
+// Tips for Getting Started:
 //   1. Use the Solution Explorer window to add/manage files
 //   2. Use the Team Explorer window to connect to source control
 //   3. Use the Output window to see build output and other messages
