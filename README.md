@@ -1,0 +1,32 @@
+# system_level_occupancy_det
+A Bayes Filter Based System Level Occupancy Detection Module. 
+
+This branch is for layout1 that represents Lab Dataset collected in February-March 2021. There are three Type A sensors in the dataset. We thus define the Adjacency matrix for the lab dataset as follows:
+
+        Door, X1, X2, X3
+Door      1   0   1   1  
+X1        0   1   1   1
+X2        1   1   1   1
+X3        1   1   1   1
+
+First we initialize the Bayes filter by generating the sensor model matrix file by executing the following script wihtin the folder titled "gen_sens_model_matlab":
+
+initialize_filter(3,0.2,0.8,[1 0 1 1;0 1 1 1;1 1 1 1;1 1 1 1])
+Above Matlab command will create a sensor model file called sens_model.txt in the main directory for our C++ bayes filter module.
+
+First argument: 3 represents the total number of sensors (Door is always considered the first row and column of the adjacency matrix). Multiple entrances/exits to the observed space are dealt as a single "Door".  
+Second argument: 0.2 is the expected probability for human subjects to stay where they are until the next observation is collected. 
+Third argument: 0.8 is the probability for them to move around.
+Fourth argument: The adjacency matrix between sensors and entrances as decribed above.
+ 
+A Visual studio C++ 2017 solution is present in the main repo directory. The file bayes_filter3.cpp has the main() function. 
+
+Please follow the directions below to understand the code flow and module usage.
+
+1. Find the function "main_bayes_filter3()" within the bayes_filter3.cpp file.
+2. This function demonstrates the use of interface function bayes_filter3(double period_elapsed, double dv[3], double time_threshold, double estimated_obs[3])
+3. Input 1: double period_elapsed: This is the number of seconds elapsed since the last observation. This must be set to 0 for the first observations. This indicates to the function bayes_filter3 that this is the first observation. Later observations can be sent with period > 0.
+4. Input 2: double dv[3]. Here dv[0] represents the digital computed output of SLEEPIR sensor X1 (0 or 1). Similarly, dv[1] represents sensor X2 output and dv[2] represents sensor X3 output. We assume for now that there are only 3 sensors in the system.
+5. Output: double estimated_obs[3] contains the occupancy state. For three sensors X1, X2 and X3, boolean variables represent their occupancy status [bool X1, bool X2, bool X3]. 
+6. You may notice that the filter estimates lag behind the observations from the sensors. This is due to certain parameters within the filter. You can adjust the double time_threshold variable to reduce or increase this lag. Increasing the variable will filter more and may filter even valid observations. Reducing the value may make the filter more responsive but this will allow noise to pass through. 
+7. Feel free to contact author via email emaad22@tamu.edu for additional explanation and/or zoom meeting. 
