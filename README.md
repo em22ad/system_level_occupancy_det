@@ -3,21 +3,21 @@ A Bayes Filter Based System Level Occupancy Detection Module.
 
 This branch is for layout1 that represents Lab Dataset collected in February-March 2021. There are three Type A sensors in the dataset. We thus define the Adjacency matrix for the lab dataset as follows:
 
-        Door, X1, X2, X3
-Door      1   0   1   1  
-X1        0   1   1   1
-X2        1   1   1   1
-X3        1   1   1   1
+&emsp; &emsp; Door &emsp; X1 &emsp; X2 &emsp; X3<br />
+Door&emsp; 1 &emsp;&emsp; 0 &emsp;&emsp; 1 &emsp; 1<br />
+X1&emsp;&emsp; 0 &emsp;&emsp; 1 &emsp;&emsp; 1 &emsp; 1<br />
+X2&emsp;&emsp; 1 &emsp;&emsp; 1 &emsp;&emsp; 1 &emsp; 1<br />
+X3&emsp;&emsp; 0 &emsp;&emsp; 1 &emsp;&emsp; 1 &emsp; 1<br />
 
 First we initialize the Bayes filter by generating the sensor model matrix file by executing the following script wihtin the folder titled "gen_sens_model_matlab":
 
-initialize_filter(3,0.2,0.8,[1 0 1 1;0 1 1 1;1 1 1 1;1 1 1 1])
+initialize_filter(3,0.2,0.8,[1 0 1 1;0 1 1 1;1 1 1 1;1 1 1 1])<br /><br />
 Above Matlab command will create a sensor model file called sens_model.txt in the main directory for our C++ bayes filter module.
 
-First argument: 3 represents the total number of sensors (Door is always considered the first row and column of the adjacency matrix). Multiple entrances/exits to the observed space are dealt as a single "Door".  
-Second argument: 0.2 is the expected probability for human subjects to stay where they are until the next observation is collected. 
-Third argument: 0.8 is the probability for them to move around.
-Fourth argument: The adjacency matrix between sensors and entrances as decribed above.
+First argument: 3 represents the total number of sensors (Door is always considered the first row and column of the adjacency matrix). Multiple entrances/exits to the observed space are dealt as a single "Door".<br />
+Second argument: 0.2 is the expected probability for human subjects to stay where they are until the next observation is collected.<br /> 
+Third argument: 0.8 is the probability for them to move around.<br />
+Fourth argument: The adjacency matrix between sensors and entrances as decribed above.<br />
  
 A Visual studio C++ 2017 solution is present in the main repo directory. The file bayes_filter3.cpp has the main() function. 
 
