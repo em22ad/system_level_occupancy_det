@@ -35,7 +35,6 @@
 
 // Include Files
 #include <iostream>
-#include "main.h"
 #include "bayes_filter3.h"
 #include "bayes_filter3_terminate.h"
 
@@ -149,6 +148,7 @@ static void main_bayes_filter3()
 
 }
 
+#ifndef SYSTEM_OD_BAYES_INTEGRATION
 //
 // Arguments    : int argc
 //                char **argv
@@ -166,6 +166,7 @@ int main(int, char **)
   bayes_filter3_terminate();
   return 0;
 }
+#endif // SYSTEM_OD_BAYES_INTEGRATION
 
 //
 // File trailer for main.cpp
