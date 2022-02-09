@@ -12,7 +12,7 @@ X4&emsp;&emsp; 1 &emsp;&emsp; 1 &emsp;&emsp; 1 &emsp; 1 &emsp; 1<br />
 
 First we initialize the Bayes filter by generating the sensor model matrix file by executing the following script wihtin the folder titled "gen_sens_model4_matlab":
 
-initialize_filte4r(4,0.2,0.8,[1 0 1 1 1;0 1 1 1 1;1 1 1 1 1;1 1 1 1 1;1 1 1 1 1])<br /><br />
+initialize_filter4(4,0.2,0.8,[1 0 1 1 1;0 1 1 1 1;1 1 1 1 1;1 1 1 1 1;1 1 1 1 1])<br /><br />
 Above Matlab command will create a sensor model file called sens_model.txt in the main directory for our C++ bayes filter module.
 
 First argument: 4 represents the total number of sensors (Door is always considered the first row and column of the adjacency matrix). Multiple entrances/exits to the observed space are dealt as a single "Door".<br />
