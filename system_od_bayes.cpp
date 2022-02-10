@@ -35,7 +35,6 @@
 
 // Include Files
 #include <iostream>
-#include "main.h"
 #include "bayes_filter4.h"
 #include "bayes_filter4_terminate.h"
 
@@ -192,6 +191,7 @@ static void main_bayes_filter4()
   //bayes_filter4(period_tmp, dv, period_tmp, e_obs);
 }
 
+#ifndef SYSTEM_OD_BAYES_INTEGRATION
 //
 // Arguments    : int argc
 //                char **argv
@@ -209,6 +209,7 @@ int main(int, char **)
   bayes_filter4_terminate();
   return 0;
 }
+#endif // SYSTEM_OD_BAYES_INTEGRATION
 
 //
 // File trailer for main.cpp
