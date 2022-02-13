@@ -5,7 +5,7 @@
 // File: bayes_filter4.h
 //
 // MATLAB Coder version            : 5.3
-// C/C++ source code generated on  : 09-Feb-2022 08:07:09
+// C/C++ source code generated on  : 13-Feb-2022 02:24:51
 //
 
 #ifndef BAYES_FILTER4_H
@@ -17,8 +17,8 @@
 #include <cstdlib>
 
 // Function Declarations
-extern void bayes_filter4(double period, const double obs[4],
-                          double time_thresh, double e_obs[4]);
+extern void bayes_filter4(signed char period, const signed char obs[4],
+                          signed char time_thresh, signed char e_obs[4]);
 
 #endif
 //

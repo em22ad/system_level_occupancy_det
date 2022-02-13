@@ -128,7 +128,8 @@
     <ClCompile Include="conv2stateno4.cpp" />
     <ClCompile Include="fileManager.cpp" />
     <ClCompile Include="fscanf.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="isequal.cpp" />
+    <ClCompile Include="system_od_bayes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bayes_filter4.h" />
@@ -141,7 +142,7 @@
     <ClInclude Include="conv2stateno4.h" />
     <ClInclude Include="fileManager.h" />
     <ClInclude Include="fscanf.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="isequal.h" />
     <ClInclude Include="rtwtypes.h" />
     <ClInclude Include="tmwtypes.h" />
   </ItemGroup>

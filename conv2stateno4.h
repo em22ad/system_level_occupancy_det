@@ -5,7 +5,7 @@
 // File: conv2stateno4.h
 //
 // MATLAB Coder version            : 5.3
-// C/C++ source code generated on  : 09-Feb-2022 08:07:09
+// C/C++ source code generated on  : 13-Feb-2022 02:24:51
 //
 
 #ifndef CONV2STATENO4_H
@@ -20,7 +20,8 @@
 struct cell_wrap_0;
 
 // Function Declarations
-void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label);
+void conv2stateno4(const signed char obs[4], double *state,
+                   cell_wrap_0 *g_label);
 
 #endif
 //

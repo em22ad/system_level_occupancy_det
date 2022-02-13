@@ -5,7 +5,7 @@
 // File: conv2stateno4.cpp
 //
 // MATLAB Coder version            : 5.3
-// C/C++ source code generated on  : 09-Feb-2022 08:07:09
+// C/C++ source code generated on  : 13-Feb-2022 02:24:51
 //
 
 // Include Files
@@ -14,12 +14,13 @@
 
 // Function Definitions
 //
-// Arguments    : const double obs[4]
+// Arguments    : const signed char obs[4]
 //                double *state
 //                cell_wrap_0 *g_label
 // Return Type  : void
 //
-void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
+void conv2stateno4(const signed char obs[4], double *state,
+                   cell_wrap_0 *g_label)
 {
   static const char cv11[15]{'X', '_', '1', ',', 'X', '_', '2', ',',
                              'X', '_', '3', ',', 'X', '_', '4'};
@@ -67,7 +68,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
   k = 0;
   exitg1 = false;
   while ((!exitg1) && (k < 4)) {
-    if (!(obs[k] == 0.0)) {
+    if (obs[k] != 0) {
       p = false;
       exitg1 = true;
     } else {
@@ -87,7 +88,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
     k = 0;
     exitg1 = false;
     while ((!exitg1) && (k < 4)) {
-      if (!(obs[k] == iv[k])) {
+      if (obs[k] != iv[k]) {
         p = false;
         exitg1 = true;
       } else {
@@ -108,7 +109,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
       k = 0;
       exitg1 = false;
       while ((!exitg1) && (k < 4)) {
-        if (!(obs[k] == iv1[k])) {
+        if (obs[k] != iv1[k]) {
           p = false;
           exitg1 = true;
         } else {
@@ -129,7 +130,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
         k = 0;
         exitg1 = false;
         while ((!exitg1) && (k < 4)) {
-          if (!(obs[k] == iv2[k])) {
+          if (obs[k] != iv2[k]) {
             p = false;
             exitg1 = true;
           } else {
@@ -150,7 +151,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
           k = 0;
           exitg1 = false;
           while ((!exitg1) && (k < 4)) {
-            if (!(obs[k] == iv3[k])) {
+            if (obs[k] != iv3[k]) {
               p = false;
               exitg1 = true;
             } else {
@@ -171,7 +172,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
             k = 0;
             exitg1 = false;
             while ((!exitg1) && (k < 4)) {
-              if (!(obs[k] == iv4[k])) {
+              if (obs[k] != iv4[k]) {
                 p = false;
                 exitg1 = true;
               } else {
@@ -192,7 +193,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
               k = 0;
               exitg1 = false;
               while ((!exitg1) && (k < 4)) {
-                if (!(obs[k] == iv5[k])) {
+                if (obs[k] != iv5[k]) {
                   p = false;
                   exitg1 = true;
                 } else {
@@ -213,7 +214,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                 k = 0;
                 exitg1 = false;
                 while ((!exitg1) && (k < 4)) {
-                  if (!(obs[k] == iv6[k])) {
+                  if (obs[k] != iv6[k]) {
                     p = false;
                     exitg1 = true;
                   } else {
@@ -234,7 +235,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                   k = 0;
                   exitg1 = false;
                   while ((!exitg1) && (k < 4)) {
-                    if (!(obs[k] == iv7[k])) {
+                    if (obs[k] != iv7[k]) {
                       p = false;
                       exitg1 = true;
                     } else {
@@ -255,7 +256,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                     k = 0;
                     exitg1 = false;
                     while ((!exitg1) && (k < 4)) {
-                      if (!(obs[k] == iv8[k])) {
+                      if (obs[k] != iv8[k]) {
                         p = false;
                         exitg1 = true;
                       } else {
@@ -276,7 +277,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                       k = 0;
                       exitg1 = false;
                       while ((!exitg1) && (k < 4)) {
-                        if (!(obs[k] == iv9[k])) {
+                        if (obs[k] != iv9[k]) {
                           p = false;
                           exitg1 = true;
                         } else {
@@ -297,7 +298,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                         k = 0;
                         exitg1 = false;
                         while ((!exitg1) && (k < 4)) {
-                          if (!(obs[k] == iv10[k])) {
+                          if (obs[k] != iv10[k]) {
                             p = false;
                             exitg1 = true;
                           } else {
@@ -318,7 +319,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                           k = 0;
                           exitg1 = false;
                           while ((!exitg1) && (k < 4)) {
-                            if (!(obs[k] == iv11[k])) {
+                            if (obs[k] != iv11[k]) {
                               p = false;
                               exitg1 = true;
                             } else {
@@ -339,7 +340,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                             k = 0;
                             exitg1 = false;
                             while ((!exitg1) && (k < 4)) {
-                              if (!(obs[k] == iv12[k])) {
+                              if (obs[k] != iv12[k]) {
                                 p = false;
                                 exitg1 = true;
                               } else {
@@ -360,7 +361,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                               k = 0;
                               exitg1 = false;
                               while ((!exitg1) && (k < 4)) {
-                                if (!(obs[k] == iv13[k])) {
+                                if (obs[k] != iv13[k]) {
                                   p = false;
                                   exitg1 = true;
                                 } else {
@@ -381,7 +382,7 @@ void conv2stateno4(const double obs[4], double *state, cell_wrap_0 *g_label)
                                 k = 0;
                                 exitg1 = false;
                                 while ((!exitg1) && (k < 4)) {
-                                  if (!(obs[k] == 1.0)) {
+                                  if (obs[k] != 1) {
                                     p = false;
                                     exitg1 = true;
                                   } else {

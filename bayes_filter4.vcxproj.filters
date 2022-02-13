@@ -36,7 +36,10 @@
     <ClCompile Include="fscanf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="system_od_bayes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="isequal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,7 +80,7 @@
     <ClInclude Include="tmwtypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="isequal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

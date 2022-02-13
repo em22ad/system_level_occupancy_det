@@ -77,11 +77,11 @@ static double argInit_real_T()
 //
 static void main_bayes_filter4()
 {
-  double dv[4];
-  double e_obs[4];
-  double period_tmp;
+  signed char dv[4];
+  signed char e_obs[4];
+  signed char period_tmp;
 
-  double time_threshold = 40;
+  signed char time_threshold = 35;
 
 
   dv[0] = 0; //sensor X1 output = 0
@@ -98,7 +98,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0 
   period_tmp = 30;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   //Noisy Obs
   dv[0] = 1; //sensor X1 output = 1
@@ -107,7 +107,7 @@ static void main_bayes_filter4()
   dv[3] = 1; //sensor X4 output = 1
   period_tmp = 30;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -115,7 +115,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0 
   period_tmp = 30;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -123,7 +123,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0 
   period_tmp = 30;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -131,7 +131,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0 
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -139,7 +139,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0 
   period_tmp = 30;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -147,7 +147,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -155,7 +155,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -163,7 +163,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -171,7 +171,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -179,7 +179,7 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
 
   dv[0] = 0; //sensor X1 output = 0
   dv[1] = 0; //sensor X2 output = 0
@@ -187,7 +187,31 @@ static void main_bayes_filter4()
   dv[3] = 0; //sensor X4 output = 0
   period_tmp = 35;
   bayes_filter4(period_tmp, dv, time_threshold, e_obs);
-  cout << e_obs[0] << " " << e_obs[1] << " " << e_obs[2] << " " << e_obs[3] << "\n";
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
+
+  dv[0] = 0; //sensor X1 output = 0
+  dv[1] = 0; //sensor X2 output = 0
+  dv[2] = 1; //sensor X3 output = 1
+  dv[3] = 0; //sensor X4 output = 0
+  period_tmp = 35;
+  bayes_filter4(period_tmp, dv, time_threshold, e_obs);
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
+
+  dv[0] = 0; //sensor X1 output = 0
+  dv[1] = 0; //sensor X2 output = 0
+  dv[2] = 1; //sensor X3 output = 1
+  dv[3] = 0; //sensor X4 output = 0
+  period_tmp = 35;
+  bayes_filter4(period_tmp, dv, time_threshold, e_obs);
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
+
+  dv[0] = 0; //sensor X1 output = 0
+  dv[1] = 0; //sensor X2 output = 0
+  dv[2] = 1; //sensor X3 output = 1
+  dv[3] = 0; //sensor X4 output = 0
+  period_tmp = 35;
+  bayes_filter4(period_tmp, dv, time_threshold, e_obs);
+  cout << int(e_obs[0]) << " " << int(e_obs[1]) << " " << int(e_obs[2]) << " " << int(e_obs[3]) << "\n";
   //bayes_filter4(period_tmp, dv, period_tmp, e_obs);
 }
 
