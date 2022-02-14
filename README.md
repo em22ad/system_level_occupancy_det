@@ -20,12 +20,12 @@ Second argument: 0.2 is the expected probability for human subjects to stay wher
 Third argument: 0.8 is the probability for them to move around.<br />
 Fourth argument: The adjacency matrix between sensors and entrances as decribed above.<br />
  
-A Visual studio C++ 2017 solution is present in the main repo directory. The file bayes_filter3.cpp has the main() function. 
+A Visual studio C++ 2017 solution is present in the main repo directory. The file bayes_filter4.cpp has the main() function. 
 
 Please follow the directions below to understand the code flow and module usage.
 
 1. Find the function "main_bayes_filter4()" within the bayes_filter4.cpp file.
-2. This function demonstrates the use of interface function bayes_filter4(double period_elapsed, double dv[3], double time_threshold, double estimated_obs[3])
+2. This function demonstrates the use of interface function bayes_filter4(int8 period_elapsed, int8 dv[4], int8 time_threshold, int8 estimated_obs[4])
 3. Input 1: double period_elapsed: This is the number of seconds elapsed since the last observation. This must be set to 0 for the first observations. This indicates to the function bayes_filter3 that this is the first observation. Later observations can be sent with period > 0.
 4. Input 2: double dv[4]. Here dv[0] represents the digital computed output of SLEEPIR sensor X1 (0 or 1). Similarly, dv[1] represents sensor X2 output, dv[2] represents sensor X3 output and dv[3] represents sensor X4. We assume for here that there are only 4 sensors in the system.
 5. Output: double e_obs[4] contains the occupancy state. For three sensors X1, X2, X3, X4 variables represent their occupancy status [bool X1, bool X2, bool X3, bool X4]. 
