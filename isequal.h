@@ -18,7 +18,23 @@
 
 // Function Declarations
 namespace coder {
-boolean_T isequal(const double varargin_1[4], const double varargin_2[4]);
+boolean_T isequal(const double varargin_1[4], const double varargin_2[4])
+{
+    int i;
+
+    for (i = 0; i < 4; i++)
+    {
+        if (varargin_1[i] != varargin_2[2])
+        {
+            break;
+        }
+    }
+
+    if (i != 4)
+        return false;
+    else
+        return true;
+}
 
 }
 
