@@ -90,7 +90,11 @@ void bayes_filter4(signed char period, const signed char obs[4],
   // Total number of occupancy states
   if (period != 0) {
     unsigned int ctr;
+#ifdef SYSTEM_OD_BAYES_INTEGRATION
+    fileid = coder::cfopen("system_level_occupancy_det/last_iter4.txt", "rb");
+#else
     fileid = coder::cfopen("last_iter4.txt", "rb");
+#endif // SYSTEM_OD_BAYES_INTEGRATION
     coder::b_fscanf(static_cast<double>(fileid), data);
     times = data[0];
     // 3:6
@@ -181,7 +185,11 @@ void bayes_filter4(signed char period, const signed char obs[4],
     } else {
       tim = 0;
     }
+#ifdef SYSTEM_OD_BAYES_INTEGRATION
+    fileid = coder::cfopen("system_level_occupancy_det/sens_model4.txt", "rb");
+#else
     fileid = coder::cfopen("sens_model4.txt", "rb");
+#endif // SYSTEM_OD_BAYES_INTEGRATION
     coder::b_fscanf(static_cast<double>(fileid), data);
     ctr = 1U;
     for (i = 0; i < 16; i++) {
@@ -206,7 +214,11 @@ void bayes_filter4(signed char period, const signed char obs[4],
     conv2stateno4(obs, &g_state, &g_label);
     s_state = g_state;
     time_taken = 0;
+#ifdef SYSTEM_OD_BAYES_INTEGRATION
+    fileid = coder::cfopen("system_level_occupancy_det/sens_model4.txt", "rb");
+#else
     fileid = coder::cfopen("sens_model4.txt", "rb");
+#endif // SYSTEM_OD_BAYES_INTEGRATION
     coder::b_fscanf(static_cast<double>(fileid), data);
     ctr = 1U;
     for (i = 0; i < 16; i++) {
@@ -488,7 +500,11 @@ void bayes_filter4(signed char period, const signed char obs[4],
   x[4] = static_cast<double>(e_obs[2]);
   x[5] = static_cast<double>(e_obs[3]);
   std::copy(&Po[0], &Po[16], &x[6]);
+#ifdef SYSTEM_OD_BAYES_INTEGRATION
+  fileid = coder::cfopen("system_level_occupancy_det/last_iter4.txt", "wb");
+#else // SYSTEM_OD_BAYES_INTEGRATION
   fileid = coder::cfopen("last_iter4.txt", "wb");
+#endif // SYSTEM_OD_BAYES_INTEGRATION
   b_NULL = NULL;
   for (i = 0; i < 22; i++) {
     coder::getfilestar(static_cast<double>(fileid), &filestar, &autoflush);
