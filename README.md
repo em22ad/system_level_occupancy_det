@@ -1,4 +1,4 @@
-# system_level_occupancy_det
+# Sensor fusion based Occupancy Detection Framework 
 A Bayes Filter Based System Level Occupancy Detection Module. 
 
 A Visual studio C++ 2017 solution is present in the repo. The file system_od_bayes.cpp has the main() function. 
